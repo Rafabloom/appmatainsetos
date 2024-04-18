@@ -1,0 +1,379 @@
+/*fundo da página*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+html {
+    cursor: url(../Imagens/inseticida.png) 30 30, auto;
+}
+
+html.clicked {
+    cursor: url(../Imagens/inseticidaative.png) 30 30, auto;
+}
+
+body {
+    background-image: url(../Imagens/landscape.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(190, 190, 190, 0.4);
+    background-blend-mode: lighten;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+script {
+    position: relative;
+    z-index: 3;
+}
+
+#startGameButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Rodapé */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    z-index: 1;
+}
+
+#toggleSoundButton {
+    z-index: 1;
+    position: relative;
+}
+
+
+/*tamanho dos mosquitos e seus lados*/
+.mosquito1 {
+    width: 50px;
+    height: 25px;
+}
+
+.mosquito2 {
+    width: 70px;
+    height: 35px;
+}
+
+.mosquito3 {
+    width: 100px;
+    height: 50px;
+}
+
+.mosquito1, .mosquito2, .mosquito3 {
+    position: absolute;
+    z-index: 2;
+}
+
+.ladoA {
+    transform: scaleX(1);
+}
+
+.ladoB {
+    transform: scaleX(-1);
+}
+
+.painel {
+    position: fixed;
+    width: 190px;
+    height: 0 auto;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    border-top: solid 2px #fff;
+    background-color: #fff;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/*pontos de vida*/
+.vidas {
+    float: left;
+}
+
+/*cronometro*/
+.cronometro {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*select - leveis*/
+.select-custom {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    color: #0022ff !important;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.select-custom option {
+    background-color: #ffffff;
+    color: #0022ff;
+}
+
+.opcao-facil {
+    background-color: #b3ffb3 !important;
+    color: #006600 !important;
+}
+
+.opcao-facil:checked {
+    background-color: #4CAF50 !important;
+    color: #ffffff !important;
+}
+
+.opcao-medio {
+    background-color: #ffff99 !important;
+    color: #b38600 !important;
+}
+
+.opcao-medio:checked {
+    background-color: #FFEB3B !important;
+    color: #000000 !important;
+}
+
+.opcao-dificil {
+    background-color: #ffb3b3 !important;
+    color: #660000 !important;
+}
+
+.opcao-dificil:checked {
+    background-color: #F44336 !important;
+    color: #ffffff !important;
+}
+
+.opcao-modoexpert {
+    background-color: #b3b3ff !important;
+    color: #000066 !important;
+}
+
+.opcao-modoexpert:checked {
+    background-color: #2196F3 !important;
+    color: #ffffff !important;
+} 
+
+/*botão customizado*/
+.btn-custom {
+    font-size: 1.60rem;
+    padding: 1rem 2.5rem;
+    background-color: #ea4040 !important;
+    border: dashed 2px #ffffff;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #520f0f !important;
+    border: dashed 2px white;
+    transition: 0.3s;
+}
+
+.btn-custom1 {
+    font-size: 1.60rem;
+    padding: 1rem 2.5rem;
+    background-color: #4fa51d !important;
+    border: dashed 2px #0b2802;
+}
+
+.btn-custom1:hover {
+    background-color: #165310 !important;
+    border: dashed 2px #ffffff;
+}
+
+.btn-custom2 {
+    font-size: 1.4rem;
+    color: white;
+    padding: 0.8em 0.9em;
+    background-color: #000000 !important;
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    margin-top: 5px !important;
+    margin-left: 5px !important;
+    float: left;
+    transition: 0.3s;
+}
+
+.btn-custom2:hover {
+    transition: 0.3s;
+    background-color: #4d4d4d !important;
+    border: solid 3px #ffffff;
+    cursor: pointer;
+}
+
+.btn-custom3 {
+    font-size: 1.8rem;
+    color: white;
+    padding: 1em 1em;
+    background-color: #009e25 !important;
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    margin-top: 5px !important;
+    margin-left: 5px !important;
+    float: left;
+    transition: 0.3s;
+}
+
+.btn-custom3:hover {
+    transition: 0.3s;
+    background-color: #024603 !important;
+    border: solid 3px #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-custom4 {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    padding: 0.5em 1em;
+    background-color: #09930e !important;
+    border: solid 3px #000000;
+    border-radius: 20px;
+    margin-top: 5px !important;
+    margin-left: 5px !important;
+    float: left;
+    transition: 0.3s;
+}
+
+.btn-custom4:hover {
+    transition: 0.3s;
+    background-color: #05612d !important;
+    color: #00ff6e;
+    border: solid 3px #000000;
+    cursor: pointer;
+    font-weight: bold;
+}
+    
+/*vitoria imagem*/
+.vitoria {
+    width: 500px;
+    height: auto;
+}
+
+/*game over imagem*/
+.game-over {
+    width: 500px;
+    height: auto; 
+}
+
+/*sweet alert*/
+.swal2-title {
+    color: #000000; 
+}
+
+.custom-sweetalert-popup {
+    background-color: #cececec6;
+    color: #c21212;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.custom-sweetalert-popup .swal2-confirm {
+    background-color: #cccccc !important;
+    color: #000000 !important;
+    border-radius: 5px !important;
+    padding: 10px 20px !important;
+    font-size: 1em !important;
+    outline: 3px solid #000000 !important;
+}
+
+.custom-sweetalert-popup .swal2-confirm:hover {
+    background-color: #000000 !important;
+    color: #fff !important;
+    outline: 4px solid #626262 !important;
+}
+
+
+/* Media query para telas com largura máxima de 306px (por exemplo, smartphones) */
+@media (max-width: 306px) {
+    .btn-custom,
+    .btn-custom1,
+    .btn-custom2 {
+        font-size: 1.4em;
+        padding: 0.9rem 1.5rem;
+        margin-left: 3em;
+    }
+
+    .game {
+        width: 50%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 503px) {
+    .btn-custom,
+    .btn-custom1,
+    .btn-custom2 {
+        font-size: 1.4em;
+        padding: 1.3rem 1.5rem;
+        margin-left: 3em;
+    }
+
+    .btn-custom3 {
+        font-size: 1em;
+    }
+
+    .game {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .vitoria{
+        width: 150%;
+        margin: 0 auto;
+        height: auto;
+    }
+    
+    .game-over {
+        width: 150%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media (min-width: 950px) {  
+    .game {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+    
+    .vitoria {
+        width: 50%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .game-over {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+    }
+}

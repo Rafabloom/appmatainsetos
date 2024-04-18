@@ -1,0 +1,91 @@
+@media (max-width: 306px) {
+    .d-flex.justify-content-center {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        margin-right: 5em !important;
+    }
+
+    .row {
+        height: 30vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .painel {
+        width: 140px;
+        height: 0 auto;
+        left: 10px;
+        bottom: 10px;
+        z-index: 1;
+    }
+
+    .vitoria {
+        width: 200%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .game-over {
+        width: 500%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 503px) {
+    .d-flex.justify-content-center {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        margin-right: 5em !important;
+    }
+
+    .row {
+        height: 30vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .painel {
+        width: 140px;
+        height: 0 auto;
+        left: 10px;
+        bottom: 10px;
+        z-index: 1;
+    }
+
+    .btn-custom,
+    .btn-custom1,
+    .btn-custom2 {
+        font-size: 1.4em;
+        padding: 0.6rem 1.5rem;
+        margin-left: 3em;
+    }
+
+    .vitoria{
+        width: 150%;
+        margin: 0 auto;
+        height: auto;
+    }
+    
+    .game-over {
+        width: 150%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media (min-width: 950px) {  
+    .vitoria {
+        width: 50%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .game-over {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+    }
+}

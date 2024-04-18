@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mate Mosquitos! Jogue agora</title>
+
+    <!--favicon-->
+    <link rel="icon" href="Imagens/icon.fw.png" type="image/x-icon">
+
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <script src="js/jogo.js"></script>
+
+</head>
+
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <!-- Áudio de fundo -->
+    <audio id="audioFundo" preload="none" src="audio/back.wav"></audio>
+
+    <!-- Áudio de spray -->
+    <audio id="audioSpray" preload="none" src="audio/spray.mp3"></audio>
+
+    <button id="toggleSoundButton" class="btn-lg btn-custom2">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <!-- Botão "Estou Pronto" -->
+    <button id="startGameButton" class="btn-lg btn-custom3">Estou Pronto</button>
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="Imagens/coracao_cheio.png">
+            <img id="v2" src="Imagens/coracao_cheio.png">
+            <img id="v3" src="Imagens/coracao_cheio.png">
+        </div>
+
+        <div class="cronometro">
+            Tempo restante: <span id="cronometro"></span>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("cronometro").innerHTML = tempo
+
+        var criaMosquito = setInterval(function () {
+            posicaoRandomica()
+        }, tempoMosquito)
+
+        // Verifica se a página atual é a 'app.html' para iniciar a música de fundo
+        if (window.location.pathname === '/app.html') {
+            var playPromise = audioFundo.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                })
+                    .catch(error => {
+                    });
+            }
+
+            audioSpray.play();
+        }
+
+    </script>
+
+
+    <script src="js/mouseclick.js"></script>
+
+</body>
+
+</html>
